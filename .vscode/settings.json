@@ -1,0 +1,12 @@
+{
+  // GitHub Copilot in VS Code: terminal commands the agent may run without
+  // asking (true) or must never run without approval (false).
+  "chat.tools.terminal.enableAutoApprove": true,
+  "chat.tools.terminal.autoApprove": {
+    "/^bash scripts/verify\\.sh\\b/": true,
+    "/^pwsh scripts/verify\\.ps1\\b/": true,
+    "/^git\\s+(status|diff|log|show)\\b/": true,
+    "rm": false,
+    "/^git\\s+push\\b.*(--force|-f\\b)/": false
+  }
+}
